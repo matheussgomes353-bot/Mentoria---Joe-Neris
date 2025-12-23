@@ -38,9 +38,8 @@ const Problem: React.FC<ProblemProps> = ({ onApplyClick }) => {
              <img 
                src="https://lh3.googleusercontent.com/pw/AP1GczNMN8J3PZ8g_V4YcIUgWDgdbI7Y-Dw0DGb_S-mNYAxuKRmcFrRis05g9e5Nbf_92v6_u_MnjhGFZe9riva4Zn5QJbAXECbSvKhzHsHRAeGv3memjFr1NFv0wtbCcCDWqtRP41fr9KUinM3_6CReXBOUEA=w915-h1371-s-no-gm?authuser=0" 
                alt="Casal em ambiente corporativo" 
-               className="object-cover w-full h-full whitescale opacity-80"
+               className="object-cover w-full h-full shadow-inner"
              />
-             <div className="absolute inset-0 bg-navy-900/10"></div>
           </div>
         </div>
       </div>

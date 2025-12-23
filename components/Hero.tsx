@@ -54,13 +54,9 @@ const Hero: React.FC<HeroProps> = ({ onApplyClick }) => {
               
               <div className="relative z-10 aspect-[4/5] overflow-hidden rounded-sm shadow-[0_50px_100px_-30px_rgba(0,0,0,0.8)] border border-white/10 bg-slate-800">
                 <img 
-                  src="mentor-joe.jpg" 
+                  src="https://lh3.googleusercontent.com/pw/AP1GczMm8cGq-4MGs-nlZUsWuywKDiLpQwhsh1MFAJ_HxY2Ops4UGPVejxo-QJvE747N-LG5UwwzhW5YOyc55qeh09sYplVJqhlhCh55HFMVRn7_PFwYB3YgW9-9hHCMouRhg_EBHzGV5nO488Bfn0HfKP0jVw=w915-h1371-s-no-gm?authuser=0" 
                   alt="Joe Neris - Mentor" 
-                  className="w-full h-full object-cover whitescale brightness-120 group-hover:whitescale-0 group-hover:scale-105 transition-all duration-2000 ease-out"
-                  onError={(e) => {
-                    // Fallback se a imagem não carregar por algum motivo
-                    e.currentTarget.src = "https://lh3.googleusercontent.com/pw/AP1GczMm8cGq-4MGs-nlZUsWuywKDiLpQwhsh1MFAJ_HxY2Ops4UGPVejxo-QJvE747N-LG5UwwzhW5YOyc55qeh09sYplVJqhlhCh55HFMVRn7_PFwYB3YgW9-9hHCMouRhg_EBHzGV5nO488Bfn0HfKP0jVw=w915-h1371-s-no-gm?authuser=0";
-                  }}
+                  className="w-full h-full object-cover transition-all duration-2000 ease-out group-hover:scale-105"
                 />
                 {/* Gradiente sutil sobre a foto */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F]/40 to-transparent pointer-events-none"></div>

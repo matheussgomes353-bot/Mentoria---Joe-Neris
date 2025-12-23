@@ -67,16 +67,16 @@ const Transformation: React.FC<TransformationProps> = ({ onApplyClick }) => {
           <div className="lg:w-1/2 relative">
             <div className="grid grid-cols-2 gap-4">
               <div className="aspect-square bg-slate-800 rounded-sm overflow-hidden">
-                <img src="https://picsum.photos/seed/biz1/400/400" alt="Work 1" className="w-full h-full object-cover opacity-60 grayscale" />
+                <img src="https://picsum.photos/seed/biz1/400/400" alt="Work 1" className="w-full h-full object-cover" />
               </div>
               <div className="aspect-square bg-slate-800 rounded-sm overflow-hidden translate-y-8">
-                <img src="https://picsum.photos/seed/biz2/400/400" alt="Work 2" className="w-full h-full object-cover opacity-60 grayscale" />
+                <img src="https://picsum.photos/seed/biz2/400/400" alt="Work 2" className="w-full h-full object-cover" />
               </div>
               <div className="aspect-square bg-slate-800 rounded-sm overflow-hidden -translate-y-8">
-                <img src="https://picsum.photos/seed/biz3/400/400" alt="Work 3" className="w-full h-full object-cover opacity-60 grayscale" />
+                <img src="https://picsum.photos/seed/biz3/400/400" alt="Work 3" className="w-full h-full object-cover" />
               </div>
               <div className="aspect-square bg-slate-800 rounded-sm overflow-hidden">
-                <img src="https://picsum.photos/seed/biz4/400/400" alt="Work 4" className="w-full h-full object-cover opacity-60 grayscale" />
+                <img src="https://picsum.photos/seed/biz4/400/400" alt="Work 4" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>

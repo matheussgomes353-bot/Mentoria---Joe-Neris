@@ -51,14 +51,13 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({ isOpen, onClose }) 
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulação de chamada de API para processamento dos dados
+    // Simulação de chamada de API
     await new Promise(resolve => setTimeout(resolve, 1500));
     
     setIsSubmitting(false);
     setIsSuccess(true);
 
-    // Redirecionamento para WhatsApp após um breve intervalo para feedback visual de sucesso
-    const whatsappUrl = "https://wa.me/5591981178118?text=Ol%C3%A1%2C%20tenho%20mais%20interesse%20na%20mentoria%20em%20casal%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.%0A%0A%23PROTOCOLODEATENDIMENTOJOEMNT02026";
+    const whatsappUrl = "https://wa.me/5591981178118?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20mentoria%20EM%20FAM%C3%8DLIA%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.%0A%0A%23PROTOCOLODEATENDIMENTOFAMILIA2026";
     
     setTimeout(() => {
       window.location.href = whatsappUrl;
@@ -66,37 +65,34 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({ isOpen, onClose }) 
   };
 
   const revenueOptions = [
-    "Até R$ 10.000",
-    "R$ 10.000 a R$ 50.000",
-    "R$ 50.000 a R$ 100.000",
-    "Acima de R$ 100.000"
+    "Até R$ 20.000",
+    "R$ 20.000 a R$ 100.000",
+    "R$ 100.000 a R$ 500.000",
+    "Acima de R$ 500.000"
   ];
 
-  // Estilos comuns para inputs baseados na solicitação de legibilidade
+  // Estilo de input para fundo escuro sofisticado
   const inputClasses = "w-full px-4 py-4 bg-[#333333] border-2 border-transparent border-t-[#C5A059] text-white font-bold text-lg rounded-sm focus:ring-2 focus:ring-[#C5A059] focus:border-transparent outline-none transition-all placeholder:text-slate-500 placeholder:font-normal";
 
-  // Gatilhos mentais por etapa reformulados
   const motivationalPhrases = {
-    1: "Vocês já deram o passo que a maioria ignora: admitir que o sucesso do negócio não pode custar a paz do lar. Vamos desenhar esse novo caminho.",
-    2: "A clareza que vocês buscam está nos detalhes. Cada resposta aqui nos aproxima do diagnóstico que vai destravar o lucro e devolver a conexão de vocês.",
-    3: "Quase lá. Você está a segundos de garantir prioridade para uma das poucas vagas deste mês. Sua família sentirá o impacto positivo dessa decisão ainda esta semana."
+    1: "Vocês já deram o passo que a maioria ignora: admitir que o sucesso da empresa não pode custar a paz da família. Vamos desenhar esse novo caminho.",
+    2: "A clareza que vocês buscam está na organização. Cada resposta aqui nos ajuda a entender como profissionalizar o seu legado familiar.",
+    3: "Quase lá. Você está a segundos de garantir prioridade para uma das poucas vagas seletivas. Sua família sentirá o impacto dessa decisão profissional ainda este mês."
   };
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-      {/* Backdrop */}
+      {/* Overlay Navy Translúcido original */}
       <div 
         className="absolute inset-0 bg-[#0A192F]/90 backdrop-blur-md transition-opacity duration-300"
         onClick={onClose}
       ></div>
       
-      {/* Modal Content */}
-      <div className="relative w-full max-w-xl bg-white rounded-sm shadow-2xl overflow-hidden transition-all duration-300 transform scale-100">
+      <div className="relative w-full max-w-2xl bg-white rounded-sm shadow-2xl overflow-hidden transition-all duration-300 transform scale-100">
         
-        {/* Header */}
         <div className="bg-slate-50 border-b border-slate-100 px-8 py-6 flex justify-between items-center">
           <div>
-            <h3 className="text-xl font-bold text-slate-900">Sessão Diagnóstica</h3>
+            <h3 className="text-xl font-bold text-slate-900">Sessão Diagnóstica Família</h3>
             {!isSuccess && <p className="text-xs text-slate-500 uppercase tracking-widest mt-1">Passo {step} de 3</p>}
           </div>
           <button onClick={onClose} className="text-slate-400 hover:text-slate-600 transition-colors">
@@ -106,7 +102,6 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({ isOpen, onClose }) 
           </button>
         </div>
 
-        {/* Progress Bar */}
         {!isSuccess && (
           <div className="h-1.5 w-full bg-slate-100">
             <div 
@@ -124,9 +119,9 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({ isOpen, onClose }) 
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h4 className="text-2xl font-bold text-slate-900 mb-4">Candidatura Processada!</h4>
+              <h4 className="text-2xl font-bold text-slate-900 mb-4">Aplicação Enviada!</h4>
               <p className="text-slate-600 leading-relaxed text-lg">
-                Excelente, <strong>{formData.name.split(' ')[0]}</strong>! Redirecionando agora para o nosso WhatsApp para priorizar seu atendimento...
+                Excelente escolha, <strong>{formData.name.split(' ')[0]}</strong>! Redirecionando para o WhatsApp para darmos prioridade ao seu negócio familiar...
               </p>
               <div className="mt-8 flex justify-center">
                 <div className="flex space-x-2">
@@ -138,7 +133,6 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({ isOpen, onClose }) 
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
-              {/* Frase Motivacional Refatorada */}
               <div className="mb-8 p-4 bg-[#C5A059]/10 border-l-4 border-[#C5A059] text-slate-800 text-sm leading-relaxed font-medium">
                 {motivationalPhrases[step as keyof typeof motivationalPhrases]}
               </div>
@@ -146,19 +140,19 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({ isOpen, onClose }) 
               {step === 1 && (
                 <div className="space-y-8 animate-in fade-in slide-in-from-right-4 duration-300">
                   <div>
-                    <label className="block text-base font-bold text-slate-800 mb-3">Qual o tipo do seu negócio físico?</label>
+                    <label className="block text-base font-bold text-slate-800 mb-3">Qual o tipo do negócio físico da família?</label>
                     <input 
                       required
                       type="text"
                       name="businessType"
                       value={formData.businessType}
                       onChange={handleChange}
-                      placeholder="Ex: Clínica, Spa, Loja, Escritório..."
+                      placeholder="Ex: Rede de lojas, Clínica, Indústria..."
                       className={inputClasses}
                     />
                   </div>
                   <div>
-                    <label className="block text-base font-bold text-slate-800 mb-3">Faturamento mensal médio?</label>
+                    <label className="block text-base font-bold text-slate-800 mb-3">Faturamento mensal médio do grupo?</label>
                     <select 
                       required
                       name="revenue"
@@ -186,14 +180,14 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({ isOpen, onClose }) 
               {step === 2 && (
                 <div className="space-y-8 animate-in fade-in slide-in-from-right-4 duration-300">
                   <div>
-                    <label className="block text-base font-bold text-slate-800 mb-3">O que mais trava o crescimento hoje?</label>
+                    <label className="block text-base font-bold text-slate-800 mb-3">Qual o maior conflito familiar hoje?</label>
                     <textarea 
                       required
                       name="decisionMaking"
                       value={formData.decisionMaking}
                       onChange={handleChange}
                       rows={4}
-                      placeholder="Conflitos em decisões? Sobrecarga de um dos lados? Falta de processos?"
+                      placeholder="Mistura de papéis? Conflito geracional? Falta de processos?"
                       className={inputClasses}
                     />
                   </div>
@@ -219,29 +213,31 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({ isOpen, onClose }) 
 
               {step === 3 && (
                 <div className="space-y-8 animate-in fade-in slide-in-from-right-4 duration-300">
-                  <div>
-                    <label className="block text-base font-bold text-slate-800 mb-3">Seu Nome Completo?</label>
-                    <input 
-                      required
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="Digite seu nome"
-                      className={inputClasses}
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-base font-bold text-slate-800 mb-3">Seu Melhor WhatsApp?</label>
-                    <input 
-                      required
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder="(00) 00000-0000"
-                      className={inputClasses}
-                    />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-base font-bold text-slate-800 mb-3">Seu Nome Completo?</label>
+                      <input 
+                        required
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="Digite seu nome"
+                        className={inputClasses}
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-base font-bold text-slate-800 mb-3">WhatsApp de contato?</label>
+                      <input 
+                        required
+                        type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="(00) 00000-0000"
+                        className={inputClasses}
+                      />
+                    </div>
                   </div>
                   <div className="flex gap-4">
                     <button 
@@ -265,9 +261,6 @@ const ApplicationModal: React.FC<ApplicationModalProps> = ({ isOpen, onClose }) 
                       ) : "Finalizar Candidatura"}
                     </button>
                   </div>
-                  <p className="text-[10px] text-center text-slate-400 uppercase tracking-widest font-bold">
-                    🛡️ Seus dados estão protegidos e serão usados apenas para o diagnóstico.
-                  </p>
                 </div>
               )}
             </form>

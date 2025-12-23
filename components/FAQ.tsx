@@ -7,20 +7,20 @@ interface FAQProps {
 
 const faqs = [
   {
-    question: "Para quem é esta mentoria?",
-    answer: "A mentoria é focada em casais que já possuem negócios em funcionamento. Não é um curso para quem quer começar do zero, mas sim para quem já fatura e precisa de estrutura para crescer sem destruir o relacionamento."
+    question: "Essa mentoria é para qualquer empresa familiar?",
+    answer: "Não. É focada em empresas em funcionamento, com faturamento recorrente e que enfrentam conflitos reais de crescimento decorrentes da mistura entre laços afetivos e gestão empresarial."
   },
   {
-    question: "Qual tipo de negócio Joe atende?",
-    answer: "O foco principal são negócios físicos ou híbridos (com presença online mas estrutura física, como clínicas, spas, lojas ou escritórios), onde a gestão operacional e societária é mais complexa."
+    question: "É para famílias grandes ou pequenas?",
+    answer: "Atendemos qualquer estrutura familiar (pais, filhos, irmãos, parentes) que trabalhe junta no dia a dia do negócio e queira profissionalizar essa relação."
   },
   {
-    question: "O foco é na empresa ou no relacionamento?",
-    answer: "Em ambos. Não existe empresa saudável com um casal em crise, e raramente um casal prospera em paz com uma empresa caótica. Trabalhamos os dois pilares de forma integrada."
+    question: "Vamos falar mais de família ou de empresa?",
+    answer: "O foco é na empresa. Acreditamos que uma empresa mal estruturada é o que destrói relações familiares. Ao organizar o negócio, a harmonia familiar é a consequência direta."
   },
   {
-    question: "Qual o objetivo da Sessão Diagnóstica?",
-    answer: "A Sessão Diagnóstica serve para avaliarmos se o seu momento de negócio e de casal é o ideal para a nossa metodologia. É um filtro para garantir que possamos realmente entregar a transformação prometida."
+    question: "Isso é terapia familiar?",
+    answer: "Não. É uma mentoria estritamente empresarial. Embora tenha um impacto emocional positivo gigantesco, o trabalho é técnico: processos, papéis, hierarquia e estratégia."
   }
 ];
 
@@ -48,22 +48,24 @@ const FAQItem: React.FC<{ q: string; a: string }> = ({ q, a }) => {
 
 const FAQ: React.FC<FAQProps> = ({ onApplyClick }) => {
   return (
-    <section id="faq" className="py-24 bg-slate-50 scroll-mt-20">
+    <section id="faq" className="py-24 bg-slate-50 scroll-mt-20 overflow-hidden">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-slate-900 mb-12">Dúvidas Frequentes</h2>
+        <h2 className="text-3xl font-bold text-slate-900 mb-12 reveal">Dúvidas Frequentes</h2>
         <div className="space-y-2 mb-16 text-left">
           {faqs.map((f, i) => (
-            <FAQItem key={i} q={f.question} a={f.answer} />
+            <div key={i} className="reveal" style={{ transitionDelay: `${i * 100}ms` }}>
+              <FAQItem q={f.question} a={f.answer} />
+            </div>
           ))}
         </div>
         
-        <div className="bg-white p-10 rounded-sm border border-slate-200 shadow-sm">
-          <p className="text-slate-600 mb-6 font-light italic">Ainda tem alguma dúvida ou sente que o seu caso é específico?</p>
+        <div className="bg-white p-10 rounded-sm border border-slate-200 shadow-sm reveal" style={{ transitionDelay: '400ms' }}>
+          <p className="text-slate-600 mb-6 font-light italic">Sua dúvida é muito específica para o seu negócio familiar?</p>
           <button 
             onClick={onApplyClick}
             className="bg-[#0A192F] text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-sm hover:bg-slate-800 transition-all shadow-lg"
           >
-            Falar com especialista
+            Aplicar para Sessão Diagnóstica
           </button>
         </div>
       </div>

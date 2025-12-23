@@ -7,25 +7,25 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onApplyClick }) => {
   return (
-    <section className="relative pt-32 pb-12 lg:pt-40 lg:pb-16 bg-[#0A192F] text-white overflow-hidden">
+    <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-24 bg-[#0A192F] text-white overflow-hidden">
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-[#C5A059]/10 rounded-full blur-[120px]"></div>
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]"></div>
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
           <div className="w-full lg:w-3/5 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C5A059]/10 border border-[#C5A059]/20 mb-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#C5A059]/10 border border-[#C5A059]/20 mb-6">
               <span className="w-2 h-2 rounded-full bg-[#C5A059] animate-pulse"></span>
               <span className="text-[#C5A059] font-bold tracking-[0.2em] uppercase text-[10px]">
                 Inscrições Abertas para Mentoria Individual
               </span>
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] mb-8 tracking-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] mb-6 tracking-tight">
               Faça sua empresa <br />
               <span className="text-[#C5A059]">crescer sem dividir</span> <br />
               sua família.
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-12 leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
+            <p className="text-lg md:text-xl text-slate-300 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
               Mentoria para negócios familiares que buscam estrutura, clareza e harmonia sem transformar a empresa em motivo de conflito entre quem está à mesa e no caixa.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
@@ -59,10 +59,9 @@ const Hero: React.FC<HeroProps> = ({ onApplyClick }) => {
         </div>
       </div>
 
-      {/* Seta de Interatividade (Apenas visual) */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-50">
         <div className="animate-bounce-subtle">
-          <svg className="w-8 h-8 text-[#C5A059]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg className="w-6 h-6 text-[#C5A059]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
           </svg>
         </div>

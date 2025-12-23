@@ -30,12 +30,12 @@ const features = [
 
 const Transformation: React.FC<TransformationProps> = ({ onApplyClick }) => {
   return (
-    <section id="transformacao" className="relative py-16 bg-[#0A192F] text-white overflow-hidden scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-6 mb-12">
-        <div className="flex flex-col lg:flex-row gap-20 items-center">
+    <section id="transformacao" className="relative py-8 bg-[#0A192F] text-white overflow-hidden scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-6 mb-8">
+        <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="lg:w-1/2 reveal-left">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8">O que muda na prática.</h2>
-            <div className="space-y-8 mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">O que muda na prática.</h2>
+            <div className="space-y-6 mb-10">
               {features.map((f, i) => (
                 <div key={i} className="flex items-start gap-4">
                   <div className="w-6 h-6 rounded-full bg-[#C5A059] flex-shrink-0 mt-1 flex items-center justify-center">
@@ -45,7 +45,7 @@ const Transformation: React.FC<TransformationProps> = ({ onApplyClick }) => {
                   </div>
                   <div>
                     <h4 className="text-lg font-bold text-white">{f.title}</h4>
-                    <p className="text-slate-400 font-light">{f.desc}</p>
+                    <p className="text-slate-400 font-light text-sm">{f.desc}</p>
                   </div>
                 </div>
               ))}
@@ -58,8 +58,8 @@ const Transformation: React.FC<TransformationProps> = ({ onApplyClick }) => {
               Aplicar para Sessão Diagnóstica
             </button>
 
-            <div className="mt-12 pt-8 border-t border-slate-700">
-              <p className="text-2xl font-serif text-[#C5A059] italic">
+            <div className="mt-8 pt-6 border-t border-slate-700">
+              <p className="text-xl font-serif text-[#C5A059] italic">
                 Empresa organizada + família preservada.
               </p>
             </div>
@@ -74,14 +74,14 @@ const Transformation: React.FC<TransformationProps> = ({ onApplyClick }) => {
                   className="w-full h-full object-cover whitescale hover:whitescale-0 transition-all duration-700" 
                 />
               </div>
-              <div className="aspect-square bg-slate-800 rounded-sm overflow-hidden translate-y-8 shadow-2xl">
+              <div className="aspect-square bg-slate-800 rounded-sm overflow-hidden translate-y-6 shadow-2xl">
                 <img 
                   src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=600&h=600&auto=format&fit=crop" 
                   alt="Harmonia familiar" 
                   className="w-full h-full object-cover whitescale hover:whitescale-0 transition-all duration-700" 
                 />
               </div>
-              <div className="aspect-square bg-slate-800 rounded-sm overflow-hidden -translate-y-8 shadow-2xl">
+              <div className="aspect-square bg-slate-800 rounded-sm overflow-hidden -translate-y-6 shadow-2xl">
                 <img 
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&h=600&auto=format&fit=crop" 
                   alt="Planejamento estratégico" 
@@ -100,8 +100,7 @@ const Transformation: React.FC<TransformationProps> = ({ onApplyClick }) => {
         </div>
       </div>
 
-      {/* Seta de Interatividade (Apenas visual) */}
-      <div className="flex justify-center pb-4 opacity-70">
+      <div className="flex justify-center pb-2 opacity-70">
         <div className="animate-bounce-subtle flex flex-col items-center gap-1">
           <span className="text-[10px] uppercase tracking-widest text-slate-400">Saiba Mais</span>
           <svg className="w-6 h-6 text-[#C5A059]" fill="none" viewBox="0 0 24 24" stroke="currentColor">

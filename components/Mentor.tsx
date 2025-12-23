@@ -7,8 +7,8 @@ interface MentorProps {
 
 const Mentor: React.FC<MentorProps> = ({ onApplyClick }) => {
   return (
-    <section id="mentor" className="relative py-32 bg-slate-50 overflow-hidden scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-6 mb-20">
+    <section id="mentor" className="relative py-20 bg-slate-50 overflow-hidden scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-6 mb-12">
         <div className="flex flex-col lg:flex-row gap-20 items-center">
           <div className="w-full lg:w-5/12 reveal-left">
             <div className="relative">
@@ -61,7 +61,7 @@ const Mentor: React.FC<MentorProps> = ({ onApplyClick }) => {
       </div>
 
       {/* Seta de Interatividade (Apenas visual) */}
-      <div className="flex justify-center pb-8">
+      <div className="flex justify-center pb-4">
         <div className="animate-bounce-subtle flex flex-col items-center gap-1">
           <span className="text-[10px] uppercase tracking-widest text-slate-400">Ver a Metodologia</span>
           <svg className="w-6 h-6 text-[#C5A059]" fill="none" viewBox="0 0 24 24" stroke="currentColor">

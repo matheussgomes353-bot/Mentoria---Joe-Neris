@@ -7,13 +7,13 @@ interface CTASectionProps {
 
 const CTASection: React.FC<CTASectionProps> = ({ onApplyClick }) => {
   return (
-    <section id="apply" className="py-24 bg-white">
+    <section id="apply" className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <div className="bg-slate-50 border border-slate-100 p-12 md:p-16 rounded-sm shadow-sm">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight italic">
+        <div className="bg-slate-50 border border-slate-100 p-10 md:p-12 rounded-sm shadow-sm">
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight italic">
             Prontos para organizar o legado?
           </h2>
-          <p className="text-slate-600 text-lg mb-10 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-600 text-lg mb-8 leading-relaxed max-w-2xl mx-auto">
             A Mentoria 'Empreendendo em Família' não é para todos os negócios. Filtramos apenas aqueles que já faturam e estão prontos para profissionalizar as relações e a gestão.
           </p>
           <div className="space-y-6">

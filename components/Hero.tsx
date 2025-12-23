@@ -7,7 +7,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onApplyClick }) => {
   return (
-    <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-[#0A192F] text-white overflow-hidden">
+    <section className="relative pt-32 pb-12 lg:pt-40 lg:pb-16 bg-[#0A192F] text-white overflow-hidden">
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-[#C5A059]/10 rounded-full blur-[120px]"></div>
       <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]"></div>
       
@@ -60,7 +60,7 @@ const Hero: React.FC<HeroProps> = ({ onApplyClick }) => {
       </div>
 
       {/* Seta de Interatividade (Apenas visual) */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
         <div className="animate-bounce-subtle">
           <svg className="w-8 h-8 text-[#C5A059]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />

@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: "Vamos falar mais de família ou de empresa?",
-    answer: "O foco é na empresa. Acreditamos que uma empresa mal estruturada é o que destrói relações familiares. Ao organizar o negócio, a harmonia familiar é a consequência direta."
+    answer: "São assuntos que se complementam. Falar de empresa sem falar de família, e vice-versa, é o erro que a maioria já comete."
   },
   {
     question: "Isso é terapia familiar?",
@@ -48,10 +48,10 @@ const FAQItem: React.FC<{ q: string; a: string }> = ({ q, a }) => {
 
 const FAQ: React.FC<FAQProps> = ({ onApplyClick }) => {
   return (
-    <section id="faq" className="py-24 bg-slate-50 scroll-mt-20 overflow-hidden">
+    <section id="faq" className="py-16 bg-slate-50 scroll-mt-20 overflow-hidden">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold text-slate-900 mb-12 reveal">Dúvidas Frequentes</h2>
-        <div className="space-y-2 mb-16 text-left">
+        <h2 className="text-3xl font-bold text-slate-900 mb-8 reveal">Dúvidas Frequentes</h2>
+        <div className="space-y-2 mb-12 text-left">
           {faqs.map((f, i) => (
             <div key={i} className="reveal" style={{ transitionDelay: `${i * 100}ms` }}>
               <FAQItem q={f.question} a={f.answer} />
@@ -59,7 +59,7 @@ const FAQ: React.FC<FAQProps> = ({ onApplyClick }) => {
           ))}
         </div>
         
-        <div className="bg-white p-10 rounded-sm border border-slate-200 shadow-sm reveal" style={{ transitionDelay: '400ms' }}>
+        <div className="bg-white p-8 rounded-sm border border-slate-200 shadow-sm reveal" style={{ transitionDelay: '400ms' }}>
           <p className="text-slate-600 mb-6 font-light italic">Sua dúvida é muito específica para o seu negócio familiar?</p>
           <button 
             onClick={onApplyClick}

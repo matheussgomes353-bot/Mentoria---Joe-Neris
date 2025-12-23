@@ -7,8 +7,8 @@ interface ProblemProps {
 
 const Problem: React.FC<ProblemProps> = ({ onApplyClick }) => {
   return (
-    <section id="problema" className="relative py-24 bg-white scroll-mt-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-16">
+    <section id="problema" className="relative py-16 bg-white scroll-mt-20 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 mb-12">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="reveal-left">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 leading-tight">
@@ -45,7 +45,7 @@ const Problem: React.FC<ProblemProps> = ({ onApplyClick }) => {
       </div>
 
       {/* Seta de Interatividade (Apenas visual) */}
-      <div className="flex justify-center pb-8">
+      <div className="flex justify-center pb-4">
         <div className="animate-bounce-subtle flex flex-col items-center gap-1">
           <span className="text-[10px] uppercase tracking-widest text-slate-400">Conheça o Mentor</span>
           <svg className="w-6 h-6 text-[#C5A059]" fill="none" viewBox="0 0 24 24" stroke="currentColor">

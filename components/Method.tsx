@@ -30,9 +30,9 @@ const pillars = [
 
 const Method: React.FC<MethodProps> = ({ onApplyClick }) => {
   return (
-    <section id="metodo" className="relative py-32 bg-white scroll-mt-20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-16">
-        <div className="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8 reveal">
+    <section id="metodo" className="relative py-20 bg-white scroll-mt-20 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 mb-12">
+        <div className="flex flex-col lg:flex-row justify-between items-end mb-16 gap-8 reveal">
           <div className="max-w-2xl">
             <span className="text-[#C5A059] font-bold tracking-widest uppercase text-xs mb-4 block">O Método</span>
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
@@ -44,7 +44,7 @@ const Method: React.FC<MethodProps> = ({ onApplyClick }) => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-slate-100 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-0 border-t border-l border-slate-100 mb-12">
           {pillars.map((pillar, idx) => (
             <div 
               key={idx} 
@@ -78,7 +78,7 @@ const Method: React.FC<MethodProps> = ({ onApplyClick }) => {
       </div>
 
       {/* Seta de Interatividade (Apenas visual) */}
-      <div className="flex justify-center pb-8">
+      <div className="flex justify-center pb-4">
         <div className="animate-bounce-subtle flex flex-col items-center gap-1">
           <span className="text-[10px] uppercase tracking-widest text-slate-400">Próximo Passo</span>
           <svg className="w-6 h-6 text-[#C5A059]" fill="none" viewBox="0 0 24 24" stroke="currentColor">

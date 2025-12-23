@@ -30,8 +30,8 @@ const features = [
 
 const Transformation: React.FC<TransformationProps> = ({ onApplyClick }) => {
   return (
-    <section id="transformacao" className="relative py-24 bg-[#0A192F] text-white overflow-hidden scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-6 mb-16">
+    <section id="transformacao" className="relative py-16 bg-[#0A192F] text-white overflow-hidden scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-6 mb-12">
         <div className="flex flex-col lg:flex-row gap-20 items-center">
           <div className="lg:w-1/2 reveal-left">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">O que muda na prática.</h2>
@@ -101,9 +101,9 @@ const Transformation: React.FC<TransformationProps> = ({ onApplyClick }) => {
       </div>
 
       {/* Seta de Interatividade (Apenas visual) */}
-      <div className="flex justify-center pb-8 opacity-70">
+      <div className="flex justify-center pb-4 opacity-70">
         <div className="animate-bounce-subtle flex flex-col items-center gap-1">
-          <span className="text-[10px] uppercase tracking-widest text-slate-400">Dúvidas Frequentes</span>
+          <span className="text-[10px] uppercase tracking-widest text-slate-400">Saiba Mais</span>
           <svg className="w-6 h-6 text-[#C5A059]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>

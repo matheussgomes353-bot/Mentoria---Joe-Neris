@@ -48,7 +48,7 @@ const FAQItem: React.FC<{ q: string; a: string }> = ({ q, a }) => {
 
 const FAQ: React.FC<FAQProps> = ({ onApplyClick }) => {
   return (
-    <section className="py-24 bg-slate-50">
+    <section id="faq" className="py-24 bg-slate-50 scroll-mt-20">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-slate-900 mb-12">Dúvidas Frequentes</h2>
         <div className="space-y-2 mb-16 text-left">

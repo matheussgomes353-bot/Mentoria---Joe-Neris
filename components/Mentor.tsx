@@ -7,7 +7,7 @@ interface MentorProps {
 
 const Mentor: React.FC<MentorProps> = ({ onApplyClick }) => {
   return (
-    <section className="py-32 bg-slate-50 overflow-hidden">
+    <section id="mentor" className="py-32 bg-slate-50 overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-20 items-center">
           
@@ -21,10 +21,6 @@ const Mentor: React.FC<MentorProps> = ({ onApplyClick }) => {
                   src="https://lh3.googleusercontent.com/pw/AP1GczNWoo8aK1BqN-S7KQrZLSyHYntGndi93-qOmJV0HTdAL0l_31wj_U379ouxRtyTq8zKU72Wdch_m-EGB2Ggb0GN1wkeGz118mCoe2OoXY4uG0-PbHrvlWROu3gH4hlUJhSz7p1xmNoxp6266VvFKjdTJA=w915-h1371-s-no-gm?authuser=0" 
                   alt="Joe Neris - Especialista em Negócios de Casal" 
                   className="w-full h-full object-cover grayscale contrast-[1.1] brightness-[0.95] transition-transform duration-[4s] group-hover:scale-110"
-                  onError={(e) => {
-                    e.currentTarget.src = "mentor-joe.jpg";
-                    e.currentTarget.classList.remove('grayscale');
-                  }}
                 />
                 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0A192F] via-transparent to-transparent opacity-90"></div>

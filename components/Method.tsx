@@ -30,7 +30,7 @@ const pillars = [
 
 const Method: React.FC<MethodProps> = ({ onApplyClick }) => {
   return (
-    <section className="py-32 bg-white">
+    <section id="metodo" className="py-32 bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row justify-between items-end mb-20 gap-8">
           <div className="max-w-2xl">

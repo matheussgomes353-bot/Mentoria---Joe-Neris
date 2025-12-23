@@ -7,7 +7,7 @@ interface ProblemProps {
 
 const Problem: React.FC<ProblemProps> = ({ onApplyClick }) => {
   return (
-    <section className="py-24 bg-white">
+    <section id="problema" className="py-24 bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>

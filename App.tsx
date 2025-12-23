@@ -22,12 +22,20 @@ const App: React.FC = () => {
       <Navbar onApplyClick={openModal} />
       <main>
         <Hero onApplyClick={openModal} />
-        <Problem onApplyClick={openModal} />
-        <Mentor onApplyClick={openModal} />
-        <Method onApplyClick={openModal} />
+        <div id="problema">
+          <Problem onApplyClick={openModal} />
+        </div>
+        <div id="mentor">
+          <Mentor onApplyClick={openModal} />
+        </div>
+        <div id="metodo">
+          <Method onApplyClick={openModal} />
+        </div>
         <Transformation onApplyClick={openModal} />
         <CTASection onApplyClick={openModal} />
-        <FAQ onApplyClick={openModal} />
+        <div id="faq">
+          <FAQ onApplyClick={openModal} />
+        </div>
       </main>
       <Footer />
       

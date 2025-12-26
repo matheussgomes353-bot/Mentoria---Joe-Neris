@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Problem from './components/Problem';
@@ -9,13 +9,14 @@ import Transformation from './components/Transformation';
 import CTASection from './components/CTASection';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
-import ApplicationModal from './components/ApplicationModal';
+import WhatsAppButton from './components/WhatsAppButton';
 
 const App: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const whatsappUrl = "https://wa.me/5591981178118?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20mentoria%20EM%20FAM%C3%8DLIA%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.%0A%0A%23PROTOCOLODEATENDIMENTOFAMILIA2026";
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const handleApply = () => {
+    window.location.href = whatsappUrl;
+  };
 
   useEffect(() => {
     const observerOptions = {
@@ -39,19 +40,19 @@ const App: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar onApplyClick={openModal} />
+      <Navbar onApplyClick={handleApply} />
       <main>
-        <Hero onApplyClick={openModal} />
-        <Problem onApplyClick={openModal} />
-        <Mentor onApplyClick={openModal} />
-        <Method onApplyClick={openModal} />
-        <Transformation onApplyClick={openModal} />
-        <CTASection onApplyClick={openModal} />
-        <FAQ onApplyClick={openModal} />
+        <Hero onApplyClick={handleApply} />
+        <Problem onApplyClick={handleApply} />
+        <Mentor onApplyClick={handleApply} />
+        <Method onApplyClick={handleApply} />
+        <Transformation onApplyClick={handleApply} />
+        <CTASection onApplyClick={handleApply} />
+        <FAQ onApplyClick={handleApply} />
       </main>
       <Footer />
       
-      <ApplicationModal isOpen={isModalOpen} onClose={closeModal} />
+      <WhatsAppButton />
     </div>
   );
 };

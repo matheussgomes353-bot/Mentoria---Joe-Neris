@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Empreendendo em Família | Mentoria Joe Neris</title>
+    <title>Empreendendo em Família | Joe Neris</title>
     <meta name="description" content="Mentoria exclusiva para negócios familiares. Faça sua empresa crescer sem dividir sua família. Estrutura, clareza e harmonia.">
     
     <!-- Open Graph / Social Media -->
@@ -25,9 +25,6 @@
     fbq('init', '1254785303140642');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1254785303140642&ev=PageView&noscript=1"
-    /></noscript>
     <!-- End Meta Pixel Code -->
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -95,6 +92,11 @@
 </script>
 </head>
   <body class="bg-gray-50 text-slate-900">
+    <!-- Meta Pixel noscript movido para cá para evitar erro de build -->
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1254785303140642&ev=PageView&noscript=1"
+    /></noscript>
+    
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
   </body>

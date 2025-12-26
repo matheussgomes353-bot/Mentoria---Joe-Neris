@@ -12,10 +12,12 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
 const App: React.FC = () => {
+  // Link oficial e único para centralizar a manutenção
   const whatsappUrl = "https://wa.me/5591981178118?text=Ol%C3%A1%2C%20tenho%20interesse%20na%20mentoria%20EM%20FAM%C3%8DLIA%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es.%0A%0A%23PROTOCOLODEATENDIMENTOFAMILIA2026";
 
   const handleApply = () => {
-    window.location.href = whatsappUrl;
+    // Abrir em nova aba é melhor para retenção do usuário na página
+    window.open(whatsappUrl, '_blank');
   };
 
   useEffect(() => {

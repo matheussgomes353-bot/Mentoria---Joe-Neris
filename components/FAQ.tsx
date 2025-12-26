@@ -65,7 +65,7 @@ const FAQ: React.FC<FAQProps> = ({ onApplyClick }) => {
             onClick={onApplyClick}
             className="bg-[#0A192F] text-white px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-sm hover:bg-slate-800 transition-all shadow-lg"
           >
-            Aplicar para Sessão Diagnóstica
+            Tirar Dúvida no WhatsApp
           </button>
         </div>
       </div>
